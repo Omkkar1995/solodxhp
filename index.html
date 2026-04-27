@@ -57,10 +57,7 @@
     color: var(--accent); letter-spacing: 0.02em; margin-right: auto;
     display: flex; align-items: center; gap: 9px;
   }
-  .logo-dot {
-    width: 8px; height: 8px; background: var(--accent);
-    border-radius: 50%; display: inline-block;
-  }
+  .logo-dot { display: none; }
   .nav-links { display: flex; gap: 30px; margin-right: 28px; }
   .nav-links a {
     color: var(--muted); text-decoration: none; font-size: 0.875rem;
@@ -156,10 +153,10 @@
   }
   .service-card:hover { border-color: var(--border-accent); transform: translateY(-3px); box-shadow: var(--shadow-md); }
   .service-icon {
-    width: 44px; height: 44px; border-radius: 8px;
+    width: 48px; height: 48px; border-radius: 10px;
     background: var(--accent-light); border: 1px solid var(--border-accent);
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.25rem; margin-bottom: 16px;
+    font-size: 1.25rem; margin-bottom: 18px;
   }
   .service-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-bottom: 9px; color: var(--text2); }
   .service-card p { color: var(--muted); font-size: 0.865rem; line-height: 1.72; }
@@ -229,7 +226,7 @@
     padding: 28px 38px; min-width: 210px; transition: all 0.22s; box-shadow: var(--shadow);
   }
   .contact-card:hover { border-color: var(--border-accent); transform: translateY(-3px); box-shadow: var(--shadow-md); }
-  .contact-card .cicon { font-size: 1.5rem; margin-bottom: 9px; }
+  .contact-card .cicon { font-size: 1.5rem; margin-bottom: 9px; display:flex; justify-content:center; }
   .contact-card .clabel { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 5px; font-weight: 600; font-family: var(--font-ui); }
   .contact-card .cvalue { font-family: var(--font-display); font-weight: 600; font-size: 0.87rem; color: var(--text); }
   .contact-card a { color: var(--text); text-decoration: none; transition: color 0.18s; }
@@ -252,7 +249,7 @@
 
 <!-- NAV -->
 <nav class="lang-bar">
-  <div class="logo-nav"><span class="logo-dot"></span> SoloDx Solutions</div>
+  <div class="logo-nav"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>&nbsp;SoloDx <span style="color:var(--text)">Solutions</span></div>
   <div class="nav-links">
     <a href="#services" data-en="Services" data-ja="サービス">Services</a>
     <a href="#ai" data-en="AI Services" data-ja="AIサービス">AI Services</a>
@@ -271,7 +268,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-inner fade-in">
     <div class="hero-badge">
-      <span class="hero-badge-dot"></span>
+      <span class="hero-badge-dot" style="flex-shrink:0"></span>
       <span data-en="Microsoft Power Platform &amp; AI Expert" data-ja="Microsoft Power Platform &amp; AI エキスパート">Microsoft Power Platform &amp; AI Expert</span>
     </div>
     <h1><span class="brand-dx">Solo<span style="color:#fff">Dx</span></span><br><span data-en="Solutions" data-ja="ソリューションズ">Solutions</span></h1>
@@ -287,44 +284,44 @@
 <section id="services">
   <div class="container">
     <div class="fade-in">
-      <div class="section-label" data-en="What We Do" data-ja="サービス内容">What We Do</div>
+      <div class="section-label" style="display:flex;align-items:center;gap:7px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><span data-en="What We Do" data-ja="サービス内容">What We Do</span></div>
       <h2 class="section-title" data-en="Microsoft Power Platform &amp; DX Services" data-ja="Microsoft Power Platform &amp; DXサービス">Microsoft Power Platform &amp; DX Services</h2>
       <div class="divider"></div>
       <p class="section-desc" data-en="End-to-end digital transformation consulting and development, specializing in the Microsoft ecosystem and AI-driven automation." data-ja="Microsoftエコシステムを中心としたAI駆動の自動化と、エンドツーエンドのDXコンサルティング・開発を提供します。">End-to-end digital transformation consulting and development, specializing in the Microsoft ecosystem and AI-driven automation.</p>
     </div>
     <div class="services-grid">
       <div class="service-card fade-in">
-        <div class="service-icon">⚡</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <h3 data-en="Power Automate &amp; Automation" data-ja="Power Automate &amp; 業務自動化">Power Automate &amp; Automation</h3>
         <p data-en="Cloud-based workflow automation using Power Automate, plus desktop automation with Power Automate Desktop and UiPath RPA solutions." data-ja="Power Automateによるクラウドワークフロー自動化、Power Automate DesktopおよびUiPathを用いたデスクトップRPAソリューションを提供します。">Cloud-based workflow automation using Power Automate, plus desktop automation with Power Automate Desktop and UiPath RPA solutions.</p>
         <div class="tag-list"><span class="tag">Power Automate</span><span class="tag">PAD</span><span class="tag">UiPath</span><span class="tag">RPA</span></div>
       </div>
       <div class="service-card fade-in">
-        <div class="service-icon">📱</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
         <h3 data-en="Power Apps Development" data-ja="Power Apps 開発">Power Apps Development</h3>
         <p data-en="Custom business application development using Power Apps — canvas and model-driven apps built to meet your specific operational needs." data-ja="Power Appsを使ったカスタムビジネスアプリ開発。キャンバスアプリ・モデル駆動型アプリを業務ニーズに合わせて構築します。">Custom business application development using Power Apps — canvas and model-driven apps built to meet your specific operational needs.</p>
         <div class="tag-list"><span class="tag">Canvas Apps</span><span class="tag">Model-Driven</span><span class="tag">Dataverse</span></div>
       </div>
       <div class="service-card fade-in">
-        <div class="service-icon">🤖</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/></svg></div>
         <h3 data-en="Copilot Studio &amp; M365 Agents" data-ja="Copilot Studio &amp; M365 エージェント">Copilot Studio &amp; M365 Agents</h3>
         <p data-en="Design and build intelligent AI agents with Microsoft Copilot Studio and M365 Copilot. Consultant and developer expertise for enterprise-grade virtual assistants." data-ja="Microsoft Copilot StudioおよびM365 Copilotを活用したAIエージェントの設計・構築。企業向け仮想アシスタントのコンサルタント兼デベロッパーとして対応します。">Design and build intelligent AI agents with Microsoft Copilot Studio and M365 Copilot. Consultant and developer expertise for enterprise-grade virtual assistants.</p>
         <div class="tag-list"><span class="tag">Copilot Studio</span><span class="tag">M365 Copilot</span><span class="tag">AI Agents</span></div>
       </div>
       <div class="service-card fade-in">
-        <div class="service-icon">🧠</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.44-4.66z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.44-4.66z"/></svg></div>
         <h3 data-en="Advanced AI Agents (Azure)" data-ja="高度なAIエージェント（Azure）">Advanced AI Agents (Azure)</h3>
         <p data-en="Build sophisticated multi-agent systems and AI-powered applications leveraging Azure AI Foundry and Azure AI Services for enterprise use cases." data-ja="Azure AI FoundryとAzure AIサービスを活用した高度なマルチエージェントシステム・AIアプリケーションを企業向けに構築します。">Build sophisticated multi-agent systems and AI-powered applications leveraging Azure AI Foundry and Azure AI Services for enterprise use cases.</p>
         <div class="tag-list"><span class="tag">Azure AI Foundry</span><span class="tag">Azure AI Services</span><span class="tag">GenAI</span></div>
       </div>
       <div class="service-card fade-in">
-        <div class="service-icon">🔗</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
         <h3 data-en="SharePoint &amp; M365 Integration" data-ja="SharePoint &amp; M365 連携">SharePoint &amp; M365 Integration</h3>
         <p data-en="Seamlessly connect SharePoint, Teams, Excel, and the full M365 suite into unified, intelligent digital workspaces for your organization." data-ja="SharePoint・Teams・Excel・M365スイートをシームレスに統合し、組織全体のインテリジェントなデジタルワークスペースを実現します。">Seamlessly connect SharePoint, Teams, Excel, and the full M365 suite into unified, intelligent digital workspaces for your organization.</p>
         <div class="tag-list"><span class="tag">SharePoint</span><span class="tag">Teams</span><span class="tag">M365</span></div>
       </div>
       <div class="service-card fade-in">
-        <div class="service-icon">🏗️</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
         <h3 data-en="DX Consulting" data-ja="DXコンサルティング">DX Consulting</h3>
         <p data-en="Strategic digital transformation consulting — from process analysis and solution design to implementation and training, helping businesses modernize with Microsoft technology." data-ja="プロセス分析・ソリューション設計・実装・トレーニングまで、Microsoft技術を活用した戦略的なDXコンサルティングを提供します。">Strategic digital transformation consulting — from process analysis and solution design to implementation and training, helping businesses modernize with Microsoft technology.</p>
         <div class="tag-list"><span class="tag">Strategy</span><span class="tag">Implementation</span><span class="tag">Training</span></div>
@@ -337,7 +334,7 @@
 <section id="ai">
   <div class="container">
     <div class="fade-in">
-      <div class="section-label" data-en="Custom AI Web Services" data-ja="カスタムAI Webサービス">Custom AI Web Services</div>
+      <div class="section-label" style="display:flex;align-items:center;gap:7px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg><span data-en="Custom AI Web Services" data-ja="カスタムAI Webサービス">Custom AI Web Services</span></div>
       <h2 class="section-title" data-en="Cutting-Edge AI, Built for You" data-ja="最先端AI、あなたのために">Cutting-Edge AI, Built for You</h2>
       <div class="divider"></div>
       <p class="section-desc" data-en="Beyond the Microsoft ecosystem, we engineer bespoke web services powered by the latest AI technologies — tailored to solve real business problems at scale." data-ja="Microsoftエコシステムを超え、最新のAI技術を駆使したカスタムWebサービスを開発。ビジネスの課題をスケールで解決します。">Beyond the Microsoft ecosystem, we engineer bespoke web services powered by the latest AI technologies — tailored to solve real business problems at scale.</p>
@@ -348,15 +345,15 @@
         <p data-en="Our approach combines deep technical expertise with practical business sense — so every AI solution is not just technically impressive, but genuinely useful and impactful." data-ja="深い技術的専門知識と実践的なビジネス感覚を組み合わせ、技術的に優れているだけでなく、実際に役立つAIソリューションを提供します。">Our approach combines deep technical expertise with practical business sense — so every AI solution is not just technically impressive, but genuinely useful and impactful.</p>
       </div>
       <div class="tiru-card fade-in">
-        <div class="dev-badge">🚧 <span data-en="Under Development" data-ja="開発中">Under Development</span></div>
-        <div class="tiru-name">TiruAI</div>
-        <p data-en="TiruAI is our flagship AI service currently in development — a platform that enables anyone to create stunning, professional business headshots using AI at an affordable price. No expensive photographer. No studio. Just exceptional results, instantly." data-ja="TiruAIは現在開発中のフラッグシップAIサービスです。AIを活用して、誰でも手頃な価格でプロフェッショナルなビジネスヘッドショットを作成できるプラットフォームです。高価なフォトグラファーもスタジオも不要。素晴らしい結果をすぐにお届けします。">TiruAI is our flagship AI service currently in development — a platform that enables anyone to create stunning, professional business headshots using AI at an affordable price. No expensive photographer. No studio. Just exceptional results, instantly.</p>
+        <div class="dev-badge"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg> <span data-en="Under Development" data-ja="開発中">Under Development</span></div>
+        <div class="tiru-name">FirstImpress</div>
+        <p data-en="FirstImpress is our flagship AI service currently in development — a platform that enables anyone to create stunning, professional business headshots using AI at an affordable price. No expensive photographer. No studio. Just exceptional results, instantly." data-ja="FirstImpressは現在開発中のフラッグシップAIサービスです。AIを活用して、誰でも手頃な価格でプロフェッショナルなビジネスヘッドショットを作成できるプラットフォームです。高価なフォトグラファーもスタジオも不要。素晴らしい結果をすぐにお届けします。">FirstImpress is our flagship AI service currently in development — a platform that enables anyone to create stunning, professional business headshots using AI at an affordable price. No expensive photographer. No studio. Just exceptional results, instantly.</p>
         <div class="tiru-features">
           <div class="tiru-feature-item"><div class="fnum">AI</div><div class="flabel" data-en="Powered" data-ja="搭載">Powered</div></div>
           <div class="tiru-feature-item"><div class="fnum">💴</div><div class="flabel" data-en="Affordable" data-ja="手頃な価格">Affordable</div></div>
           <div class="tiru-feature-item"><div class="fnum">⚡</div><div class="flabel" data-en="Fast Results" data-ja="迅速な結果">Fast Results</div></div>
         </div>
-        <p style="margin-top:18px; font-size:0.77rem; color:#92400e;" data-en="Stay tuned — TiruAI is coming soon. Contact us to join the early access list." data-ja="乞うご期待 — TiruAIは近日公開予定です。早期アクセスリストへの参加はお問い合わせください。">Stay tuned — TiruAI is coming soon. Contact us to join the early access list.</p>
+        <p style="margin-top:18px; font-size:0.77rem; color:#92400e;" data-en="Stay tuned — FirstImpress is coming soon. Contact us to join the early access list." data-ja="乞うご期待 — FirstImpressは近日公開予定です。早期アクセスリストへの参加はお問い合わせください。">Stay tuned — FirstImpress is coming soon. Contact us to join the early access list.</p>
       </div>
     </div>
   </div>
@@ -372,7 +369,7 @@
         </div>
       </div>
       <div class="fade-in">
-        <div class="section-label" data-en="About the Founder" data-ja="創業者について">About the Founder</div>
+        <div class="section-label" style="display:flex;align-items:center;gap:7px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span data-en="About the Founder" data-ja="創業者について">About the Founder</span></div>
         <h2 class="owner-name">TIRMARE OMKAR</h2>
         <div class="owner-title" data-en="Founder &amp; Principal Consultant — SoloDx Solutions" data-ja="創業者 &amp; 主任コンサルタント — SoloDx Solutions">Founder &amp; Principal Consultant — SoloDx Solutions</div>
         <p class="about-text" data-en="With deep expertise across the Microsoft Power Platform ecosystem and next-generation AI technologies, Omkar founded SoloDx Solutions to help businesses of all sizes unlock the true potential of digital transformation." data-ja="Microsoft Power Platformエコシステムと次世代AI技術における深い専門知識を持つオムカルは、あらゆる規模の企業がDXの真の可能性を引き出せるよう、SoloDx Solutionsを設立しました。">With deep expertise across the Microsoft Power Platform ecosystem and next-generation AI technologies, Omkar founded SoloDx Solutions to help businesses of all sizes unlock the true potential of digital transformation.</p>
@@ -393,24 +390,24 @@
 <section id="contact">
   <div class="container">
     <div class="fade-in" style="text-align:center;">
-      <div class="section-label" data-en="Let's Work Together" data-ja="一緒に働きましょう">Let's Work Together</div>
+      <div class="section-label" style="display:flex;align-items:center;gap:7px;justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-en="Let's Work Together" data-ja="一緒に働きましょう">Let's Work Together</span></div>
       <h2 class="section-title" data-en="Get in Touch" data-ja="お問い合わせ">Get in Touch</h2>
       <div class="divider" style="margin:12px auto 0;"></div>
       <p class="section-desc" style="margin:18px auto 0;" data-en="Ready to start your digital transformation journey? Let's talk about how SoloDx Solutions can help your business thrive." data-ja="デジタルトランスフォーメーションの旅を始めませんか？SoloDx Solutionsがどのようにあなたのビジネスの成長を支援できるか、ぜひご相談ください。">Ready to start your digital transformation journey? Let's talk about how SoloDx Solutions can help your business thrive.</p>
     </div>
     <div class="contact-cards fade-in">
       <div class="contact-card">
-        <div class="cicon">📞</div>
+        <div class="cicon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l1.42-1.42a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <div class="clabel" data-en="Phone" data-ja="電話">Phone</div>
         <div class="cvalue"><a href="tel:+81702291680">070 2291 6801</a></div>
       </div>
       <div class="contact-card">
-        <div class="cicon">✉️</div>
+        <div class="cicon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <div class="clabel" data-en="Email" data-ja="メール">Email</div>
         <div class="cvalue"><a href="mailto:personal_omibox@outlook.jp">personal_omibox@outlook.jp</a></div>
       </div>
       <div class="contact-card">
-        <div class="cicon">📍</div>
+        <div class="cicon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <div class="clabel" data-en="Based In" data-ja="拠点">Based In</div>
         <div class="cvalue" data-en="Japan" data-ja="日本">Japan</div>
       </div>
